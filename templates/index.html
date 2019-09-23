@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for post in post_list %}
+        <div>
+            <span class='author'>
+                {{ post.author }}
+            </span>
+            <span class='creation'>
+                {{ post.created_on }}
+            </span>
+            <span class='slug'>
+                [{{ post.slug }}]
+            </span>
+            <span class='content'>
+                {{ post.content }}
+            </span>
+        </div>
+    {% endfor %}
+{% endblock %}
