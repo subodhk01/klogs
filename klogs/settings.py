@@ -114,7 +114,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.pyhtonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'subodhk01.pyhtonanywhere.com']
 
 
 # Static files (CSS, JavaScript, Images)
