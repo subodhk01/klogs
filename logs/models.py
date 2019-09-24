@@ -14,7 +14,7 @@ SLUG_TYPE = (
 )
 
 class Post(models.Model):
-    slug = models.SlugField(max_length=200, unique=False, choices=SLUG_TYPE, default=3)
+    slug = models.SlugField(max_length=200, unique=False, choices=SLUG_TYPE, default='W')
     author = models.ForeignKey(User, on_delete= models.CASCADE,related_name='blog_posts', default='subodhk')
     updated_on = models.DateTimeField(auto_now= True)
     content = models.TextField()
