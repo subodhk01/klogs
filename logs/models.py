@@ -9,11 +9,12 @@ STATUS = (
 SLUG_TYPE = (
     ('S', 'Statement'),
     ('D', 'Doubt'),
-    ('I', 'Imp')
+    ('I', 'Imp'),
+    ('W', 'Work')
 )
 
 class Post(models.Model):
-    slug = models.SlugField(max_length=200, unique=False, choices=SLUG_TYPE, default=0)
+    slug = models.SlugField(max_length=200, unique=False, choices=SLUG_TYPE, default=3)
     author = models.ForeignKey(User, on_delete= models.CASCADE,related_name='blog_posts', default='subodhk')
     updated_on = models.DateTimeField(auto_now= True)
     content = models.TextField()
